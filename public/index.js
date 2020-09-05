@@ -1,34 +1,3 @@
-/* fetch('https://www.metaweather.com/api/location/search/?query=oslo', {
-        mode: 'cors',
-        credentials: 'include'
-    })
-    .then(response => response.json())
-    .then(data => console.log(data)); */
-/* 
-
-$.ajax({
-    type: "GET",
-    url: "https://od-api-demo.oxforddictionaries.com:443/api/v1/lexicalcategories/english",
-    dataType: 'JSONP',
-    success: function (data) {
-        console.log(data);
-    }
-
-})
-
-$.ajax({
-    type: "GET",
-    url: "http://localhost:3000/movies",
-    dataType: 'JSONP',
-    success: function (data) {
-        console.log(data);
-    }
-
-}) */
-
-
-
-
 let payload = {
     token: "kwi1dWHzH1_yr40gXM9p_A",
     data: {
@@ -42,6 +11,7 @@ let payload = {
 $.ajax({
     type: "POST",
     url: "https://app.fakejson.com/q",
+    // url: "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=cfwwRqigGqkeV8pidrxL6ULkN0UFJLwd&limit=5",
     data: payload,
     success: function (resp) {
         // Do something with fake data
@@ -52,6 +22,9 @@ $.ajax({
         }
     }
 });
+
+
+
 
 
 

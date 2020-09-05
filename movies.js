@@ -50,15 +50,13 @@ router.get('/', function (req, res) {
 });
 
 // Post New Data
-router.post('/post-movies', function (req, res) {
-
+router.post('/', function (req, res) {
+    let newmovie = req.body;
+    console.log(newmovie);
     var newId = movies[movies.length - 1].id + 1;
-    movies.push({
-        id: newId,
-        name: "Over",
-        year: 1888,
-        rating: 9
-    });
+
+    //newmovie.id = getId();
+    movies.push(newmovie);
     res.json({
         message: " Movie Added",
         location: "/movies/" + newId
@@ -66,7 +64,7 @@ router.post('/post-movies', function (req, res) {
 });
 
 
-console.log(movies);
+//console.log(movies);
 router.get('/:id([0-9]{3,})', function (req, res) {
     var currMovie = movies.filter(function (movie) {
         if (movie.id == req.params.id) {
